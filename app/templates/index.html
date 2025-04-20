@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Spending Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function toggleAmount(input) {
+            const amountField = input.parentNode.parentNode.querySelector('input[type="number"]');
+            amountField.disabled = !input.checked;
+            amountField.style.visibility = input.checked ? "visible" : "hidden";
+            if (!input.checked) amountField.value = '';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="admin-link">
+            <a href="{{ url_for('admin_dashboard') }}">Admin Login</a>
+        </div>
+        
+        <h1>Healthcare Spending Survey</h1>
+        
+        <div class="privacy-message">
+            🔒 Your privacy matters! This survey is completely anonymous. 
+            We do not collect any personal identifying information.
+        </div>
+
+        <form method="POST">
+            <div class="form-group">
+                <label>Age: 
+                    <input type="number" name="age" required min="18" max="100" class="visible-field">
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender:
+                    <select name="gender" required class="visible-field">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>Total Income ($): 
+                    <input type="number" step="0.01" name="income" required class="visible-field">
+                </label>
+            </div>
+
+            <div class="expenses-section">
+                <h3>Monthly Expenses ($)</h3>
+                
+                <div class="expense-category">
+                    <label>
+                        <input type="checkbox" name="utilities_check" onchange="toggleAmount(this)">
+                        Utilities:
+                    </label>
+                    <input type="number" step="0.01" name="utilities" class="expense-field" disabled>
+                </div>
+
+                <div class="expense-category">
+                    <label>
+                        <input type="checkbox" name="entertainment_check" onchange="toggleAmount(this)">
+                        Entertainment:
+                    </label>
+                    <input type="number" step="0.01" name="entertainment" class="expense-field" disabled>
+                </div>
+
+                <div class="expense-category">
+                    <label>
+                        <input type="checkbox" name="school_fees_check" onchange="toggleAmount(this)">
+                        School Fees:
+                    </label>
+                    <input type="number" step="0.01" name="school_fees" class="expense-field" disabled>
+                </div>
+
+                <div class="expense-category">
+                    <label>
+                        <input type="checkbox" name="shopping_check" onchange="toggleAmount(this)">
+                        Shopping:
+                    </label>
+                    <input type="number" step="0.01" name="shopping" class="expense-field" disabled>
+                </div>
+
+                <div class="expense-category">
+                    <label>
+                        <input type="checkbox" name="healthcare_check" onchange="toggleAmount(this)">
+                        Healthcare:
+                    </label>
+                    <input type="number" step="0.01" name="healthcare" class="expense-field" disabled>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

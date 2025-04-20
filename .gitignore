@@ -1,0 +1,45 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+venv/
+env/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+
+# Environment files
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Local development
+
+# Render deployment
+.render/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Debug files
+debug.log

@@ -1,0 +1,134 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.visible-field {
+    display: block !important;
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.expense-field {
+    visibility: hidden;
+    width: 120px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.expenses-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.expense-category {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Privacy Message */
+.privacy-message {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Thank You Page */
+.thank-you-message {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.confirmation-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.next-steps ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.next-steps li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.return-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.return-link:hover {
+    background-color: #0056b3;
+}
+
+/* Admin Link */
+.admin-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.admin-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.admin-link a:hover {
+    background-color: #007bff;
+    color: white;
+}

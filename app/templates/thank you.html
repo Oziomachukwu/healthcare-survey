@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-message">
+            <h1>🎉 Thank You for Your Submission!</h1>
+            <div class="confirmation-details">
+                <p>Your responses have been successfully recorded and will help shape better healthcare solutions.</p>
+                
+                <div class="next-steps">
+                    <h2>What Happens Next?</h2>
+                    <ul>
+                        <li>Your anonymous data will be analyzed with other responses</li>
+                        <li>Results will inform new healthcare product development</li>
+                        <li>Aggregate findings will be published on our website</li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <p>Questions? Contact our research team at <a href="mailto:healthcare@survey.com">healthcare@survey.com</a></p>
+                </div>
+            </div>
+
+            <a href="{{ url_for('index') }}" class="return-link">← Return to Survey Form</a>
+        </div>
+    </div>
+</body>
+</html>

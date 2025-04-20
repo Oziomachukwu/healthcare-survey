@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Healthcare Survey Analytics</h1>
+        <a href="{{ url_for('download_charts') }}" class="download-btn">
+            📥 Download Charts for PowerPoint
+        </a>
+        
+        <div class="charts-grid">
+            <div class="chart">
+                <img src="{{ url_for('static', filename='charts/top_ages.png') }}">
+            </div>
+            <div class="chart">
+                <img src="{{ url_for('static', filename='charts/gender_spending.png') }}">
+            </div>
+        </div>
+        
+        <a href="{{ url_for('index') }}" class="return-link">← Return to Survey</a>
+    </div>
+</body>
+</html>
