@@ -22,3 +22,4 @@ class User:
     def csv_header():
         return ['Age', 'Gender', 'Income', 'Utilities', 
                 'Entertainment', 'School Fees', 'Shopping', 'Healthcare']
+    
