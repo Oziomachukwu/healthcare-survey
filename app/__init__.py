@@ -14,6 +14,3 @@ app.secret_key = os.getenv('SECRET_KEY')
 # Configure MongoDB connection
 client = MongoClient(os.getenv('MONGO_URI'))
 db = client.healthcare_survey
-
-# Import routes after app creation to avoid circular imports
-from app import routes
