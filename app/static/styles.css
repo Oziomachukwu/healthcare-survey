@@ -132,3 +132,55 @@ body {
     background-color: #007bff;
     color: white;
 }
+/* Admin Specific Styles */
+.admin-container {
+    max-width: 1200px;
+}
+
+.admin-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.charts-section {
+    margin: 40px 0;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.chart-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-card img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.chart-error {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+.admin-footer {
+    margin-top: 40px;
+    text-align: center;
+}

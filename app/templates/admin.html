@@ -1,26 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Healthcare Survey</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Healthcare Survey Analytics</h1>
-        <a href="{{ url_for('download_charts') }}" class="download-btn">
-            📥 Download Charts for PowerPoint
-        </a>
-        
-        <div class="charts-grid">
-            <div class="chart">
-                <img src="{{ url_for('static', filename='charts/top_ages.png') }}">
+    <div class="container admin-container">
+        <!-- Header Section -->
+        <header class="admin-header">
+            <h1>Healthcare Survey Analytics</h1>
+            <div class="admin-controls">
+                <a href="{{ url_for('download_csv') }}" class="download-btn">
+                    📥 Download CSV Data
+                </a>
+                <a href="{{ url_for('download_charts') }}" class="download-btn">
+                    📊 Download Charts
+                </a>
             </div>
-            <div class="chart">
-                <img src="{{ url_for('static', filename='charts/gender_spending.png') }}">
+        </header>
+
+        <!-- Charts Display Section -->
+        <section class="charts-section">
+            <h2>Generated Visualizations</h2>
+            
+            <div class="chart-grid">
+                <!-- Top Ages Chart -->
+                <div class="chart-card">
+                    <h3>Top Ages by Income</h3>
+                    <img src="{{ url_for('static', filename='charts/top_ages.png') }}" 
+                         alt="Top Ages by Income Chart"
+                         onerror="this.style.display='none'">
+                    {% if not charts_exists('top_ages.png') %}
+                    <p class="chart-error">Chart not generated yet</p>
+                    {% endif %}
+                </div>
+
+                <!-- Gender Spending Chart -->
+                <div class="chart-card">
+                    <h3>Spending by Gender</h3>
+                    <img src="{{ url_for('static', filename='charts/gender_spending.png') }}" 
+                         alt="Gender Spending Chart"
+                         onerror="this.style.display='none'">
+                    {% if not charts_exists('gender_spending.png') %}
+                    <p class="chart-error">Chart not generated yet</p>
+                    {% endif %}
+                </div>
             </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="admin-footer">
+            <a href="{{ url_for('index') }}" class="return-link">
+                ← Return to Survey Form
+            </a>
         </div>
-        
-        <a href="{{ url_for('index') }}" class="return-link">← Return to Survey</a>
     </div>
 </body>
 </html>

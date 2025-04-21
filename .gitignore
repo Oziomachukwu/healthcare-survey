@@ -14,7 +14,8 @@ env/
 # Jupyter Notebooks
 .ipynb_checkpoints/
 
-
+# generated files
+.csv
 # Environment files
 
 # IDE
