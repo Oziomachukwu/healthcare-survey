@@ -1,6 +1,8 @@
 # Healthcare Spending Survey System
 
-[![Link to Render deployment](https://healthcare-survey-1.onrender.com)
+
+
+*Run this on your browser to access the render deployment:* https://healthcare-survey-1.onrender.com
 
 A Flask-based web application for collecting and analyzing healthcare spending data, featuring MongoDB integration and admin analytics.
 
