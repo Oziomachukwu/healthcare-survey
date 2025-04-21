@@ -15,9 +15,9 @@ env/
 .ipynb_checkpoints/
 
 # generated files
-.csv
+*.csv
 # Environment files
-
+.env
 # IDE
 .vscode/
 .idea/
